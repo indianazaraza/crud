@@ -108,26 +108,7 @@ class Buttons_navbar:
 	def there_are_empty_fields(self):
 		#check if all fields are empty
 		#returns a boolean
-		return self.is_empty_name_or_surname() or self.is_empty_address_or_pass()
-
-
-	def is_empty_name_or_surname(self):
-		#check if field name or field surname are empty
-		#returns a boolean
-		return self.is_empty_field(0) or self.is_empty_field(1)
-
-
-	def is_empty_address_or_pass(self):
-		#check if field address or field password are empty
-		#returns a boolean
-		return self.is_empty_field(2) or self.is_empty_field(3)
-
-
-	def is_empty_field(self, num):
-		#check if any text field is empty
-		#receive a field number
-		#returns a boolean
-		return self.list_data_user()[num] == ""
+		return "" in self.list_data_user()
 
 
 	def delete_user(self):
